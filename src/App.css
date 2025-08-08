@@ -1,0 +1,195 @@
+/* 🎨 --- Global Styles & Variables --- 🎨 */
+:root {
+  --background-color: #f4f7f9;
+  --app-container-bg: #ffffff;
+  --primary-text-color: #2c3e50;
+  --secondary-text-color: #7f8c8d;
+  --accent-color: #3498db;
+  --accent-color-hover: #2980b9;
+  --danger-color: #e74c3c;
+  --danger-color-hover: #c0392b;
+  --success-color: #2ecc71;
+  --success-color-hover: #27ae60;
+  --border-color: #ecf0f1;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to the top */
+  padding-top: 50px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 📱 --- Main App Container --- 📱 */
+.app-container {
+  background: var(--app-container-bg);
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-sizing: border-box;
+}
+
+/* 📝 --- Header & Form --- 📝 */
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-text-color);
+}
+
+.add-todo-form {
+  display: flex;
+  margin-bottom: 2.5rem;
+  gap: 10px;
+}
+
+.add-todo-form input {
+  flex-grow: 1;
+  padding: 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.add-todo-form input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.add-todo-form button {
+  padding: 0.9rem 1.5rem;
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-todo-form button:hover {
+  background-color: var(--accent-color-hover);
+}
+
+
+/* ✅ --- To-Do Item Styling --- ✅ */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: var(--app-container-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: var(--secondary-text-color);
+}
+
+.todo-item-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+/* Custom Checkbox */
+.todo-item-content input[type='checkbox'] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo-item-content input[type='checkbox']:hover {
+  border-color: var(--accent-color);
+}
+
+.todo-item-content input[type='checkbox']:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.todo-item-content input[type='checkbox']:checked::after {
+  content: '✔';
+  color: white;
+  position: absolute;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.todo-item-content span {
+  font-size: 1.1rem;
+}
+
+.edit-input {
+  font-size: 1.1rem;
+  padding: 0.4rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* 🛠️ --- Action Buttons --- 🛠️ */
+.todo-item-buttons {
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0; /* Hide buttons by default */
+  transition: opacity 0.3s ease;
+}
+
+.todo-item:hover .todo-item-buttons {
+  opacity: 1; /* Show buttons on hover */
+}
+
+.todo-item-buttons button {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: var(--success-color);
+}
+
+.edit-btn:hover {
+  background-color: var(--success-color-hover);
+}
+
+.delete-btn {
+  background-color: var(--danger-color);
+}
+
+.delete-btn:hover {
+  background-color: var(--danger-color-hover);
+}
