@@ -1,12 +1,35 @@
-# React + Vite
+# React To-Do List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple to-do list application built with React. It allows users to add, delete, edit, and mark tasks as complete. This project was created as part of an assignment.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Add new tasks
+-   Mark tasks as completed
+-   Edit existing tasks
+-   Delete tasks
+-   Tasks are saved in the browser's local storage
 
-## Expanding the ESLint configuration
+## How to Run This Application
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/](https://github.com/)<Your-GitHub-Username>/<Your-Repository-Name>.git
+    ```
+
+2.  **Navigate to the project directory:**
+    ```bash
+    cd <Your-Repository-Name>
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+The application will be running at `http://localhost:5173`.
